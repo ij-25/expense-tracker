@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Expense Tracker</title>
+  </head>
+  <body class="bg-white flex flex-col justify-center">
+    <p
+      class="text-3xl italic shadow-2xl text-black  items-center justify-center flex"
+    >
+      Expense Tracker
+    </p>
+    <div class="container flex mt-10 gap-y-5 flex-col items-center justify-center">
+      <p class="align-middle text-4xl text-black flex ">Your Balance    </p>
+      <p id="balance " class="text-3xl  text-black flex">₹ 0</p>
+      <div class="inc-exp-cont flex space-x-16 px-3 py-2 bg-slate-300 rounded-xl  justify-center">
+        <div class="">
+          <h4 class="text-3xl text-black flex  items-center">Income</h4>
+          <p id="money-plus" class="money-plus text-xl text-green-600 flex">+ ₹ 0.0</p>
+        </div>
+        <div class="bg-black w-0.5"> </div>
+        <div>
+          <h4 class="text-3xl text-black flex">Expense</h4>
+          <p id="money-minus" class="money-minus text-xl text-red-600 flex ">- ₹ 0.0</p>
+        </div>
+      </div>
+      <h2 class="text-2xl text-black ">History</h2>
+      <ul>
+        <li class="minus flex text-xl bg-slate-200 justify-items-end pt-2">
+          Cash <span> - ₹ 500 </span><button class="delete-btn">X</button>
+        </li>
+      </ul>
+      <h3 class="text-black text-2xl">
+        Add new transactions
+        <form id="form" type = "submit">
+          <div class="bg-black h-0.5"></div>
+          <div class="form-control text-xl my-8">
+            <label for="Text">Text </label>
+            <input type="text" class="rounded-lg bg-slate-300 pl-3 py-2 text-xl mx-9" id="text"  placeholder="Enter text..." />
+          </div>
+          <div class="form-control my-8 text-xl">
+            <label for="Text">Amount </label>
+            <input type="amount" class="rounded-lg bg-slate-300 pl-3 py-2" id="amount" placeholder="Enter amount..." />
+    
+          </div>
+          <button id="add" class="bg-slate-400 text-black">ADD</button>
+          <button class="btn rounded-lg flex bg-purple-500 justify-items-end shadow-lg py-4 px-3">All Transactions</button>
+        </form>
+      </h3>
+    </div>
+    <script src="live.js"></script>
+  </body>
+</html>
